@@ -27,8 +27,10 @@ Elas nasceram do uso real no dia a dia de um PO de produtos B2B integrados a ERP
 O Antigravity usa o mesmo formato de skill (SKILL.md), então as pastas funcionam sem conversão.
 1. Baixe o repositório (botão **Code → Download ZIP**) ou peça ao agente do Antigravity para cloná-lo.
 2. Copie as pastas `po-copiloto` e `po-historias-de-usuario` para:
-   - `~/.gemini/antigravity/skills/` — vale para todos os projetos; ou
+   - `~/.gemini/config/skills/` — vale para todos os projetos (no Windows: `C:\Users\<seu usuário>\.gemini\config\skills\`); ou
    - `.agents/skills/` dentro do projeto — vale só para aquele projeto.
+
+   A pasta antiga `~/.gemini/antigravity/skills/` ainda funciona, mas é legada. Mantenha a skill em um lugar só, para o agente não carregar uma versão velha.
 3. Preencha os mesmos arquivos de adaptação do passo 3 acima.
 4. Abra uma nova conversa. O agente escolhe a skill pela descrição; para garantir, cite o nome dela no pedido.
 
