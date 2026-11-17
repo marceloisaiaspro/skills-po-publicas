@@ -15,7 +15,7 @@ Elas nasceram do uso real no dia a dia de um PO de produtos B2B integrados a ERP
 - **Simples primeiro:** cartão curto, poucos critérios testáveis e tasks que o dev entende sem abrir a história.
 - **Funciona com qualquer board:** Azure DevOps, Jira ou outro. Com uma integração (MCP), o Claude pode registrar os itens direto no board, sempre com a sua confirmação.
 
-## Como usar
+## Como usar no Claude
 1. Baixe o arquivo da skill na pasta [`dist/`](dist/) (`po-copiloto.zip` e/ou `po-historias-de-usuario.zip`).
 2. No Claude, envie o .zip na área de Skills das configurações (consulte a ajuda oficial do Claude se não encontrar a opção).
 3. Adapte ao seu contexto preenchendo uma vez:
@@ -23,7 +23,16 @@ Elas nasceram do uso real no dia a dia de um PO de produtos B2B integrados a ERP
    - `po-copiloto/contexto/empresa-modelo.md` — empresa, produtos, pessoas e padrões de Wiki.
 4. Peça normalmente, por exemplo: *"escreva a história para o vendedor ver a carteira de clientes inativos"* ou *"isso é bug ou melhoria?"*.
 
-As duas funcionam juntas: a `po-copiloto` tria e decide; a `po-historias-de-usuario` escreve os itens.
+## Como usar no Google Antigravity
+O Antigravity usa o mesmo formato de skill (SKILL.md), então as pastas funcionam sem conversão.
+1. Baixe o repositório (botão **Code → Download ZIP**) ou peça ao agente do Antigravity para cloná-lo.
+2. Copie as pastas `po-copiloto` e `po-historias-de-usuario` para:
+   - `~/.gemini/antigravity/skills/` — vale para todos os projetos; ou
+   - `.agents/skills/` dentro do projeto — vale só para aquele projeto.
+3. Preencha os mesmos arquivos de adaptação do passo 3 acima.
+4. Abra uma nova conversa. O agente escolhe a skill pela descrição; para garantir, cite o nome dela no pedido.
+
+As duas skills funcionam juntas: a `po-copiloto` tria e decide; a `po-historias-de-usuario` escreve os itens.
 
 ## Créditos
 - **Prof. Marcelo Neves** — ensinamentos sobre escrita de histórias de usuário e uso de exemplos bons e ruins, base do método.
